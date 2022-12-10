@@ -1,0 +1,54 @@
+body{
+	color: white;
+	background-color: black;
+}
+
+.container{
+	margin-top: 150px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+h1{
+	font-family: 'Roboto', sans-serif;
+}
+
+p{
+	font-size: 20px;
+	font-family: 'Sono', sans-serif;
+}
+
+#bubble-wrapper {
+	height: 100%;
+	width: 100%;
+
+	position: fixed;
+	bottom: 0px;
+
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.bubble{
+	height: max(300px, 30vw);
+	width: max(300px, 30vw);
+
+	background-color: rgb(33, 150, 243);
+	border-radius: 100%;
+
+	position: absolute;
+	left: 50%;
+	top: 100%;
+
+	animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+	from, to{
+		transform: translate(-50px, 0%);
+	}
+
+	50%{
+		transform: translate(-50%, -50%);
+	}
+}	
